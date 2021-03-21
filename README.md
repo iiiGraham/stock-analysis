@@ -16,7 +16,8 @@ I initially set up the macro to run a nested loop which calculated trading volum
 
 The analysis originally took 0.94 seconds to calculate the results for the entire list of stocks in 2017, and took 0.98 seconds to calculate the results for the entire list of stocks in 2018
 
-![2017 Analysis (original](Resources/"2017 Analysis - Initial Run".png)
+![2017 Analysis (original](Resources/2017 Analysis - Initial Run.png)
+
 
 ![2018 Analysis (original)](Resources/"2018 Analysis - Initial Run".png)
 
