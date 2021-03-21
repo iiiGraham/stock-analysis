@@ -4,30 +4,32 @@ For this project I helped a financial advisor create a VBA macro to quickly run 
 ## Results: 
 2017 was a much better year for clean energy stocks than 2018. DQ was most likely at the top of Steve's parents' list because it was the top performing stock on their clean energy list in 2017. DQ's 2017 return of 199% was significantly higher than any other name on the list. DQ was also the least traded stock on the list. This likely indicates DQ is a smaller company relative to the other tickers on the list. Smaller companies may have lower trading volume makes daily prices more volatile and makes it harder to purchase or sell the stock. Taking these risks into account, it is still clear that DQ was a popular choice for clean energy investors in 2017 and that the entire sector saw significant investor demand. 
 
-![2017 Analysis (refactored)](Resources/"2017 Analysis - Refactored".png)
+![2017 Analysis (refactored)](Resources/2017%20Analysis%20-%20Refactored.png)
 
 2018 was a much more difficult year for the sector. Only two of the 12 stocks on the list generated a positive rate of return for the year. For the companies that were in the green, ENPH and RUN, the returns were once again significantly higher than the broader stock market. Many of the stocks on our list saw a boost in trading volume from 2017 to 2018. The higher trading volume likely indicates the sector saw increased demand. Because of the high returns in 2017 it is probable that investors took notice of the clean energy space and wanted to increase their allocation to companies in the clean energy sector. While returns were significantly lower, the majority of still generated positive returns over the two-year period. Only three names on the list would have had a negative return from 2017-2018. 
 
-![2018 Analysis (original)](Resources/"2018 Analysis - Refactored".png)
+![2018 Analysis (original)](Resources/2018%20Analysis%20-%20Refactored.png)
 
 I initially set up the macro to run a nested loop which calculated trading volume, the stock's starting price, and the stock's ending price which were then used to calculate the annual return. The data was then output to an analysis results page and the program moved on to the next ticker on the list until each ticker and its corresponding data was output on the results page. 
 
-![Initial Macro Program Sample](Resources/"program_1.1".png)
+![Initial Macro Program Sample](Resources/program_1.1.png)
 
 The analysis originally took 0.94 seconds to calculate the results for the entire list of stocks in 2017, and took 0.98 seconds to calculate the results for the entire list of stocks in 2018
 
-![2017 Analysis (original](Resources/2017 Analysis - Initial Run.png)
+![2017 Analysis (original](Resources/2017%20Analysis%20-%20Initial%20Run.png)
 
 
-![2018 Analysis (original)](Resources/"2018 Analysis - Initial Run".png)
+![2018 Analysis (original)](Resources/2018%20Analysis%20-%20Initial%20Run.png)
 
 After reviewing the program, I was able to speed up the analysis by making the following changes. First, I moved the row count outside of the loops. This saved time by only calculating the value once instead of having it calculated for each ticker analysis. Second, I created arrays to hold the calculated values for trading volume, starting prices, and ending prices. Creating array for each ticker added flexibility to the code by providing an easier way to access information from each array. Instead of the program immediately outputting all of the data the arrays can be used to output information for a single stock without using up resources. Lastly, I re-wrote the loops in the program as separate loops. Doing so split the calculation section of the macro from the output and formatting section of the macro.
 
+![Refactored Program Sample](Resources/program_2.1.png)
+
 The changes to the macro sped up the analysis and will make it easier to implement the macro on a longer list of stocks. It will also make the macro easier to manipulate in the future if additional features are requested. After making the changes the analysis for 2017 ran in 0.36 seconds, and the analysis for 2018 ran in 0.23 seconds with formatting. 
 
-![2017 Analysis (refactored)](Resources/"2017 Analysis - Refactored".png)
+![2017 Analysis (refactored)](Resources/2017%20Analysis%20-%20Refactored.png)
 
-![2017 Analysis (refactored)](Resources/"2018 Analysis - Refactored".png)
+![2017 Analysis (refactored)](Resources/2018%20Analysis%20-%20Refactored.png)
 
 ## Summary: 
 ### What are the advantages or disadvantages of refactoring code?
